@@ -1,0 +1,10 @@
+<template name="scoreTemplate">
+  {{> templateHeader}}
+<h2>Pontszám</h2>
+<table>
+	{{#each getSzint}}
+	<tr><td>{{getSzintName}}</td><td>{{getSzintScore}}</td></tr>
+	{{/each}}
+</table>
+</template>
+
