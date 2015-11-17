@@ -1,14 +1,19 @@
 
 <template name="templateHeader">
 <div id="header">
- <h1>Welcome to Meteor!</h1>
+ <a href="/home"><h1>Welcome to Meteor!</h1></a>
 	{{#if currentUser}}
 	  {{> dashboard}}
 	{{else}}
 	  {{> register}}
 	  {{> login}}
 	{{/if}}
+	{{> score}}
 </div>
+</template>
+
+<template name="score">
+<a href="/score">Aktuális eredmény</a>
 </template>
 
 
