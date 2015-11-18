@@ -1,14 +1,20 @@
 
 <template name="templateHeader">
+
 <div id="header">
  <a href="/home"><h1>Welcome to Meteor!</h1></a>
 	{{#if currentUser}}
 	  {{> dashboard}}
+	  {{#if getAdmin}}
+	  	{{> adminHeader}}
+	  {{/if}}
 	{{else}}
 	  {{> register}}
 	  {{> login}}
 	{{/if}}
 	{{> score}}
+
+	
 </div>
 </template>
 
@@ -36,4 +42,11 @@
 <template name="dashboard">
  <div id="currentUserEmail">{{getAddress }}</div>
  <p><a href="#" class="logout">logout</a></p>
+</template>
+
+<template name="adminHeader">
+<div>
+ <p><a href="/adminSzint" >Szintek szerkeztése</a></p>
+  <p><a href="/adminEvent" >Esemény szerkeztése</a></p>
+ </div>
 </template>
