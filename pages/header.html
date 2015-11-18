@@ -1,13 +1,13 @@
 
 <template name="templateHeader">
-
+{{#if getAdmin}}
+	  	{{> adminHeader}}
+	  {{/if}}
 <div id="header">
  <a href="/home"><h1>Welcome to Meteor!</h1></a>
 	{{#if currentUser}}
 	  {{> dashboard}}
-	  {{#if getAdmin}}
-	  	{{> adminHeader}}
-	  {{/if}}
+	  
 	{{else}}
 	  {{> register}}
 	  {{> login}}
@@ -47,7 +47,9 @@
 </template>
 
 <template name="adminHeader">
-<div style="float:right;">
+
+<div style="float:right; background-color: red">
+		<h3>Adminfelület menü:</h3>
  <p><a href="/adminSzint" >Szintek szerkeztése</a></p>
   <p><a href="/adminEvent" >Esemény szerkeztése</a></p>
  </div>
