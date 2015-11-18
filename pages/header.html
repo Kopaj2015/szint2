@@ -13,7 +13,7 @@
 	  {{> login}}
 	{{/if}}
 	{{> score}}
-
+	{{> event}}
 	
 </div>
 </template>
@@ -21,7 +21,9 @@
 <template name="score">
 <a href="/score">Aktuális eredmény</a>
 </template>
-
+<template name="event">
+<a href="/event">Események</a>
+</template>
 
 <template name="register">
  <form>
@@ -45,7 +47,7 @@
 </template>
 
 <template name="adminHeader">
-<div>
+<div style="float:right;">
  <p><a href="/adminSzint" >Szintek szerkeztése</a></p>
   <p><a href="/adminEvent" >Esemény szerkeztése</a></p>
  </div>
