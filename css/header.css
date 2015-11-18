@@ -1,3 +1,9 @@
-#header{
-	background-color: grey;
+﻿#header{
+	width:100%;
+	background:black;
+	width:100%;
+	color:aqua;
+	text-align: center;
+	background-image:url('kmkbg.jpg');
+
 }

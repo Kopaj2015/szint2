@@ -1,6 +1,31 @@
 <template name="adminSzint">
   {{> templateHeader}}
-<h2>Admin Szint szerkeztő</h2>
-
+      {{> leaderboard}}
+    {{> addPlayerForm}}  
+    <table>
+	{{#each getSzint}}
+	<tr><td>{{getSzintName}}</td><td>{{getSzintScore}}</td></tr>
+	{{/each}}
+</table>
 </template>
 
+
+
+<template name="leaderboard">
+  <table>
+  {{#each player}}
+      <tr>
+        <td>{{name}}</td>
+        <td>{{score}}</td>
+      </tr>
+  {{/each}}
+  </table>
+</template>
+
+<template name="addPlayerForm">
+        <form>
+        <input type="text" name="playerAddName">
+        <input type="submit" value="Add Player">
+    </form>
+
+    </template>
